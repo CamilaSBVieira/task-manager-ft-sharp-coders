@@ -1,25 +1,15 @@
-import { beginDateInput, beginTimeInput, descriptionInput, finishDateInput, finishTimeInput, nameInput } from '../elements.js'
-import { alert } from '../helperFunctions/alert.js'
+import { checkTaskAlert } from '../helperFunctions/checkTaskAlert.js'
+import { getInputValues } from '../helperFunctions/getInputValues.js'
 import { reloadWindow } from '../helperFunctions/reload.js'
-import { check, update } from "./store.js"
+import { validateCreateTaskForm } from '../helperFunctions/validateCreateTaskForm.js'
+import { update } from "./store.js"
 
 export const checkTask = () => {
 
-    let name = nameInput.value
-    let beginDate = beginDateInput.value
-    let finishDate = finishDateInput.value
-    let beginTime = beginTimeInput.value
-    let finishTime = finishTimeInput.value
-    let description = descriptionInput.value
+    let { name, beginDate, beginTime, finishDate, finishTime, description } = getInputValues()
 
     if (!name || !beginDate || !finishDate || !beginTime || !finishTime || !description) {
-        !name && nameInput.classList.add('is-invalid')
-        !beginDate && beginDateInput.classList.add('is-invalid')
-        !finishDate && finishDateInput.classList.add('is-invalid')
-        !beginTime && beginTimeInput.classList.add('is-invalid')
-        !finishTime && finishTimeInput.classList.add('is-invalid')
-        !description && descriptionInput.classList.add('is-invalid')
-        alert('Preencha todos os campos!', 'error')
+        validateCreateTaskForm()
     } else {
         let status = 'feita'
         const task = {
@@ -32,7 +22,7 @@ export const checkTask = () => {
             status
         }
         update(task)
-        alert('Tarefa feita!', 'success')
+        checkTaskAlert()
         setTimeout(() => {
             reloadWindow()
         }, 1500);

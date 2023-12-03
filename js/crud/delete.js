@@ -1,9 +1,10 @@
+import { deletedTaskAlert } from '../helperFunctions/deletedTaskAlert.js';
 import { reloadWindow } from '../helperFunctions/reload.js'
 import { del } from "./store.js";
 
 export function deleteTask() {
     del()
-    alert('Tarefa deletada com sucesso!', 'success')
+    deletedTaskAlert()
     setTimeout(() => {
         reloadWindow()
     }, 1500);

@@ -1,4 +1,6 @@
+import { deleteSession } from "./store.js"
+
 export const logout = () => {
-    sessionStorage.clear()
+    deleteSession()
     window.location.replace('./index.html')
 }

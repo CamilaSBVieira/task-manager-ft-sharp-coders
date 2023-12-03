@@ -1,28 +1,16 @@
-import { nameInput, beginDateInput, finishDateInput, beginTimeInput, finishTimeInput, descriptionInput } from '../elements.js'
-import { alert } from '../helperFunctions/alert.js'
+import { createStatus } from '../helperFunctions/createStatus.js'
+import { getInputValues } from '../helperFunctions/getInputValues.js'
 import { reloadWindow } from '../helperFunctions/reload.js'
+import { taskCreatedAlert } from '../helperFunctions/taskCreatedAlert.js'
 import { currTaskId, create } from './store.js'
 
 export const createTask = (e) => {
     e.preventDefault()
-    let name = nameInput.value
-    let beginDate = beginDateInput.value
-    let finishDate = finishDateInput.value
-    let beginTime = beginTimeInput.value
-    let finishTime = finishTimeInput.value
-    let description = descriptionInput.value
+    
+    let { name, beginDate, beginTime, finishDate, finishTime, description } = getInputValues()
 
-    let dataAtual = new Date().getTime()
-    let begin = new Date(`${beginDate} ${beginTime}`).getTime()
-    let finish = new Date(`${finishDate} ${finishTime}`).getTime()
-    let status
-    if (dataAtual >= begin && dataAtual <= finish) {
-        status = 'em andamento'
-    } else if (dataAtual > finish) {
-        status = 'em atraso'
-    } else if (dataAtual < begin) {
-        status = 'pendente'
-    }
+    let status = createStatus(beginDate, beginTime, finishDate, finishTime)
+
     const task = {
         id: currTaskId,
         name,
@@ -35,7 +23,7 @@ export const createTask = (e) => {
     }
 
     create(task)
-    alert('Tarefa criada com sucesso!', 'success')
+    taskCreatedAlert()
     setTimeout(() => {
         reloadWindow()
     }, 1500);

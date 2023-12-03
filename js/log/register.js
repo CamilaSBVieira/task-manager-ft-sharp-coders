@@ -1,22 +1,19 @@
-import { emailRegister, nameRegister, passwordRegister } from '../elements.js'
 import { generateId } from './helperFunction/generateId.js'
 import { hashPassword } from './helperFunction/hashPassword.js'
 import { create, users } from './store.js'
-import { alert } from '../helperFunctions/alert.js'
+import { validateRegisterForm } from '../helperFunctions/validateRegisterForm.js'
+import { getRegisterInputValues } from './helperFunction/getRegisterInputValues.js'
 
 export const register = async (e) => {
     e.preventDefault()
-    const name = nameRegister.value
-    const email = emailRegister.value
-    const password = passwordRegister.value
+
+    let { name, email, password } = getRegisterInputValues()
 
     const passwordHash = await hashPassword(password)
 
     const validate = users.findIndex(u => u.email == email)
     if (validate >= 0) {
-        emailRegister.classList.add('is-invalid')
-        emailRegister.onchange = () => { emailRegister.classList.remove('is-invalid') }
-        alert('E-mail já cadastrado, utilize outro e-mail ou faça login na sua conta já existente.', 'error')
+        validateRegisterForm()
     } else {
 
         const userId = generateId()

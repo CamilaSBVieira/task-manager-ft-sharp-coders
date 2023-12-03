@@ -5,3 +5,12 @@ export const create = (user) => {
     sessionStorage.setItem("user", user.userId)
     localStorage.setItem('users', JSON.stringify(users))
 }
+
+export const createSession = (i) => {
+    const user = users[i]
+    sessionStorage.setItem('user', user.userId)
+}
+
+export const deleteSession = () => {
+    sessionStorage.clear()
+}
