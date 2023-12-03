@@ -1,12 +1,12 @@
 import { createStatus } from '../helperFunctions/createStatus.js'
-import { getInputValues } from '../helperFunctions/getInputValues.js'
+import { getInputValues } from '../helperFunctions/form/getInputValues.js'
 import { reloadWindow } from '../helperFunctions/reload.js'
-import { taskCreatedAlert } from '../helperFunctions/taskCreatedAlert.js'
+import { taskCreatedAlert } from '../helperFunctions/alerts/taskCreatedAlert.js'
 import { currTaskId, create } from './store.js'
 
 export const createTask = (e) => {
     e.preventDefault()
-    
+
     let { name, beginDate, beginTime, finishDate, finishTime, description } = getInputValues()
 
     let status = createStatus(beginDate, beginTime, finishDate, finishTime)

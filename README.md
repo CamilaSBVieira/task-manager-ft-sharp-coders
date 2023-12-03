@@ -2,6 +2,6 @@
 
 #### To Do
 
-[ ] - Fix List Function
 [ ] - Change Interface
-[ ] - Change 'Check' column name
+[ ] - Check dates
+[ ] - Disable form

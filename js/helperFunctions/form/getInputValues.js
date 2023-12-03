@@ -1,4 +1,4 @@
-import { beginDateInput, beginTimeInput, descriptionInput, finishDateInput, finishTimeInput, nameInput } from "../elements.js"
+import { beginDateInput, beginTimeInput, descriptionInput, finishDateInput, finishTimeInput, nameInput } from "../../elements.js"
 
 export const getInputValues = () => {
     let name = nameInput.value

@@ -1,6 +1,6 @@
-import { validateLoginForm } from '../helperFunctions/validateLoginForm.js'
-import { getLoginInputValues } from './helperFunction/getLoginInputValues.js'
-import { hashPassword } from './helperFunction/hashPassword.js'
+import { validateLoginForm } from './helperFunction/form/validateLoginForm.js'
+import { getLoginInputValues } from './helperFunction/form/getLoginInputValues.js'
+import { hashPassword } from './helperFunction/createUser/hashPassword.js'
 import { createSession, users } from './store.js'
 
 export const login = async (e) => {

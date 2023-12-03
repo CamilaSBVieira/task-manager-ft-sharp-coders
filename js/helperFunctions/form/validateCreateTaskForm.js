@@ -1,5 +1,5 @@
-import { beginDateInput, beginTimeInput, descriptionInput, finishDateInput, finishTimeInput, nameInput } from "../elements.js"
-import { alert } from "./alert.js"
+import { beginDateInput, beginTimeInput, descriptionInput, finishDateInput, finishTimeInput, nameInput } from "../../elements.js"
+import { fillFormAlert } from "../alerts/fillFormAlert.js"
 import { getInputValues } from "./getInputValues.js"
 
 export const validateCreateTaskForm = () => {
@@ -10,5 +10,5 @@ export const validateCreateTaskForm = () => {
     !beginTime && beginTimeInput.classList.add('is-invalid')
     !finishTime && finishTimeInput.classList.add('is-invalid')
     !description && descriptionInput.classList.add('is-invalid')
-    alert('Preencha todos os campos!', 'error')
+    fillFormAlert()
 }

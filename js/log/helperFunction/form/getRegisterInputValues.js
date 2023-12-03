@@ -1,4 +1,4 @@
-import { emailRegister, nameRegister, passwordRegister } from "../../elements.js"
+import { emailRegister, nameRegister, passwordRegister } from "../../../elements.js"
 
 export const getRegisterInputValues = () => {
     const name = nameRegister.value

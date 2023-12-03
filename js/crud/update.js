@@ -1,9 +1,9 @@
 import { update } from "./store.js"
 import { reloadWindow } from '../helperFunctions/reload.js'
-import { updatedTaskAlert } from "../helperFunctions/updatedTaskAlert.js"
+import { updatedTaskAlert } from "../helperFunctions/alerts/updatedTaskAlert.js"
 import { createStatus } from "../helperFunctions/createStatus.js"
-import { getInputValues } from "../helperFunctions/getInputValues.js"
-import { validateCreateTaskForm } from "../helperFunctions/validateCreateTaskForm.js"
+import { getInputValues } from "../helperFunctions/form/getInputValues.js"
+import { validateCreateTaskForm } from "../helperFunctions/form/validateCreateTaskForm.js"
 
 export const updateTask = () => {
     

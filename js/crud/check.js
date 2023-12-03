@@ -1,7 +1,7 @@
-import { checkTaskAlert } from '../helperFunctions/checkTaskAlert.js'
-import { getInputValues } from '../helperFunctions/getInputValues.js'
+import { checkTaskAlert } from '../helperFunctions/alerts/checkTaskAlert.js'
+import { getInputValues } from '../helperFunctions/form/getInputValues.js'
 import { reloadWindow } from '../helperFunctions/reload.js'
-import { validateCreateTaskForm } from '../helperFunctions/validateCreateTaskForm.js'
+import { validateCreateTaskForm } from '../helperFunctions/form/validateCreateTaskForm.js'
 import { update } from "./store.js"
 
 export const checkTask = () => {

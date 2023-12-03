@@ -26,7 +26,7 @@ body {
     --bg-color: var(--purple-200);
     --box-shadow-color: var(--gray-300);
     --name-color: var(--gray-400);
-    
+
 }
 
 [data-bs-theme="dark"] {
@@ -37,13 +37,18 @@ body {
 
 }
 
+/* navbar */
+
 nav {
     background-color: var(--bg-color);
     box-shadow: 2px 2px 4px var(--box-shadow-color);
 }
+
 nav strong {
     color: var(--name-color);
 }
+
+/* buttons */
 
 .primary-button {
     background-color: var(--pink-400);
@@ -93,10 +98,14 @@ nav strong {
     color: var(--bs-white);
 }
 
+/* form */
+
 .form-control:focus {
     border-color: var(--pink-400);
     box-shadow: inset 0 1px 1px var(--purple-200), 0 0 8px var(--purple-200);
 }
+
+/* task status */
 
 .ongoing p,
 .late p,

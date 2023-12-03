@@ -35,3 +35,7 @@ export const tableBody = document.querySelector('[data-role="tableBody"]')
 // edit Buttons
 export const editButtons = document.querySelector('[data-role="editButtons"]')
 export const editButton = document.querySelector('[data-role="editButton"]')
+
+// modal
+export const title = document.querySelector('[data-role="taskTitle"]')
+export const description = document.querySelector('[data-role="taskDescription"]')

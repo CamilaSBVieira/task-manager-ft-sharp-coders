@@ -1,8 +1,8 @@
-import { generateId } from './helperFunction/generateId.js'
-import { hashPassword } from './helperFunction/hashPassword.js'
+import { generateId } from './helperFunction/createUser/generateId.js'
+import { hashPassword } from './helperFunction/createUser/hashPassword.js'
 import { create, users } from './store.js'
-import { validateRegisterForm } from '../helperFunctions/validateRegisterForm.js'
-import { getRegisterInputValues } from './helperFunction/getRegisterInputValues.js'
+import { validateRegisterForm } from './helperFunction/form/validateRegisterForm.js'
+import { getRegisterInputValues } from './helperFunction/form/getRegisterInputValues.js'
 
 export const register = async (e) => {
     e.preventDefault()

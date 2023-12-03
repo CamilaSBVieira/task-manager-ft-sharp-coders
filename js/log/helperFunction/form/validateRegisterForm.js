@@ -1,5 +1,5 @@
-import { emailRegister } from "../elements.js"
-import { userAlreadyExistsAlert } from "./userAlreadyExistsAlert.js"
+import { emailRegister } from "../../../elements.js"
+import { userAlreadyExistsAlert } from "../../../helperFunctions/alerts/userAlreadyExistsAlert.js"
 
 export const validateRegisterForm = () => {
     emailRegister.classList.add('is-invalid')

@@ -1,6 +1,6 @@
-import { deletedTaskAlert } from '../helperFunctions/deletedTaskAlert.js';
 import { reloadWindow } from '../helperFunctions/reload.js'
 import { del } from "./store.js";
+import { deletedTaskAlert } from '../helperFunctions/alerts/deletedTaskAlert.js'
 
 export function deleteTask() {
     del()

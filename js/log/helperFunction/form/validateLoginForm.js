@@ -1,5 +1,5 @@
-import { emailLogin, passwordLogin } from "../elements.js"
-import { invalidCredentialsAlert } from "./invalidCredentialsAlert.js"
+import { emailLogin, passwordLogin } from "../../../elements.js"
+import { invalidCredentialsAlert } from '../../../helperFunctions/alerts/invalidCredentialsAlert.js'
 
 export const validateLoginForm = () => {
     emailLogin.classList.add('is-invalid')

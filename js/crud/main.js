@@ -3,13 +3,18 @@ import { edit } from "./edit.js"
 import { createForm, editButton, logoutButton, userNameEl } from "../elements.js"
 import { listTasks } from "./list.js"
 import { logout } from '../log/logout.js'
-import { getUserName, loadUserInfo } from "./store.js"
+import { currUser, getUserName, loadUserInfo } from "./store.js"
+import { notLoggedAlert } from '../helperFunctions/alerts/notLoggedAlert.js'
 
-// window.onload = () => {
-    loadUserInfo()
-    userNameEl.innerText = getUserName()
-    listTasks()
-// }
+loadUserInfo()
+if (!currUser) {
+    notLoggedAlert()
+    setTimeout(() => {
+        window.location = './index.html'
+    }, 1500);
+}
+userNameEl.innerText = getUserName()
+listTasks()
 
 createForm.onsubmit = createTask
 

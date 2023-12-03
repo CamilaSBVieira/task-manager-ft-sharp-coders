@@ -1,4 +1,4 @@
-import { users } from "../store.js"
+import { users } from "../../store.js"
 
 export const generateId = () => {
     let currId

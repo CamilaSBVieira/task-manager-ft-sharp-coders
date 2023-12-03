@@ -1,4 +1,4 @@
-import { emailLogin, passwordLogin } from "../../elements.js"
+import { emailLogin, passwordLogin } from "../../../elements.js"
 
 export const getLoginInputValues = () => {
     const email = emailLogin.value
