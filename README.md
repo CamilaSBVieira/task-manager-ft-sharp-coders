@@ -1,7 +1,6 @@
-## Desafio - Ima Tech & MXM Sistemas
+# Desafio do programa Sharp Coders - Ímã Tech & MXM Sistemas
 
-#### To Do
+A proposta é um sistema de gerenciamento de tarefas, utilizando HTML, CSS, JS e Bootstrap.
+O projeto deve ser responsivo, funcionando tanto em telas grandes quanto em dispositivos móveis.
+Não pode ser usada nenhuma tecnologia back-end.
 
-[ ] - Change Interface
-[ ] - Check dates
-[ ] - Disable form
